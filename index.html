@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía 1 - Desarrollo Web</title>
+    <link rel="stylesheet" href="css/estilosIndex.css">
+    <link rel="stylesheet" href="css/estilosReto.css">
+</head>
+
+<body>
+
+    <header id="encabezado">
+        <h1>Guía 1 - Desarrollo Web</h1>
+        <p>Ejemplos y ejercicios de Introducción al Desarrollo Web</p>
+    </header>
+
+    <main>
+        <h2>Ejercicios de la guía</h2>
+
+        <p>
+            En esta página se encuentran los ejemplos y ejercicios realizados
+            durante la primera guía de Desarrollo Web.
+        </p>
+
+        <ul>
+            <li>
+                <a href="estilos_embebidos.html">Ejemplo 1 - Estilos embebidos</a>
+            </li>
+
+            <li>
+                <a href="ejemplo2.html">Ejemplo 2</a>
+            </li>
+
+            <li>
+                <a href="paises.html">Ejercicio - Países de Centroamérica</a>
+            </li>
+
+            <li>
+                <a href="arcane.html">Ejercicio - Arcane</a>
+            </li>
+        </ul>
+
+        <!-- ================= RETO IA ================= -->
+        <section id="reto-ia">
+
+            <h2>Reto IA</h2>
+
+            <p>
+                Sitio salvadoreño seleccionado:
+                <a href="https://www.anda.gob.sv/" target="_blank" rel="noopener">
+                    Administración Nacional de Acueductos y Alcantarillados (ANDA)
+                </a>.
+                A partir de su página de inicio se ejecutaron dos instrucciones
+                distintas en una herramienta de inteligencia artificial: una
+                genérica y una elaborada con contexto. Ambos resultados están
+                publicados como sitios independientes.
+            </p>
+
+            <h3>Diagnóstico de la página de inicio actual</h3>
+
+            <p>
+                Se revisó la página de inicio de anda.gob.sv y se identificaron
+                tres aspectos concretos susceptibles de mejora en cuanto a
+                estructura y presentación visual:
+            </p>
+
+            <ol class="diagnostico">
+                <li>
+                    <strong>La página no prioriza los trámites que la gente
+                    busca.</strong> Lo primero que aparece es un carrusel de
+                    banners decorativos, subidos en 2022. Los accesos que sí se
+                    usan, como descargar la factura o el portal de pagos,
+                    aparecen después y con el mismo peso visual que los enlaces
+                    institucionales.
+                </li>
+                <li>
+                    <strong>La navegación es demasiado profunda y está
+                    duplicada.</strong> El menú tiene hasta tres niveles y varios
+                    elementos apuntan a un enlace vacío que no navega. Además,
+                    "Contáctenos" contiene otro "Contáctenos" y el Portal de
+                    Transparencia aparece repetido en el menú y en el pie.
+                </li>
+                <li>
+                    <strong>No se distingue el contenido vigente del
+                    archivado.</strong> Conviven noticias de 2026 con avisos de
+                    2023 y 2024 en bloques del mismo tamaño. Los iconos mezclan
+                    estilos y formatos, y falta espacio en blanco entre las
+                    secciones.
+                </li>
+            </ol>
+
+            <div class="capturas">
+                <figure>
+                    <img src="vista-escritorio.png"
+                         alt="Captura de la página de inicio de ANDA en pantalla de escritorio">
+                    <figcaption>Vista de escritorio del sitio original</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="vista-movil.png"
+                         alt="Captura de la página de inicio de ANDA en pantalla de teléfono">
+                    <figcaption>Vista móvil del sitio original</figcaption>
+                </figure>
+            </div>
+
+            <h3>Instrucciones utilizadas</h3>
+
+            <details class="prompt" open>
+                <summary>Instrucción 1 &mdash; genérica, sin contexto</summary>
+<pre class="prompt__texto">Mejora la página de inicio del sitio web de ANDA de El Salvador.
+Hazla más moderna y ordenada. Dame el código.</pre>
+            </details>
+
+            <details class="prompt">
+                <summary>Instrucción 2 &mdash; elaborada, con contexto (clic para desplegar)</summary>
+<pre class="prompt__texto">Actúa como diseñador y desarrollador web front-end. Vas a rediseñar la página
+de inicio de un sitio salvadoreño real, y voy a darte todo el contexto antes de
+pedirte el código.
+
+SITIO
+Administración Nacional de Acueductos y Alcantarillados (ANDA), El Salvador.
+URL: https://www.anda.gob.sv/
+Es la institución pública que provee agua potable y alcantarillado en el país.
+
+CONTEXTO 1 — Estructura actual del sitio (tomada del código fuente)
+- Barra institucional superior con enlaces a "Instituciones" y "Portal de
+  Transparencia".
+- Encabezado con el logotipo y un buscador.
+- Menú principal con submenús de hasta tres niveles: Inicio, Servicios, Nuestro
+  Trabajo, Institución (Antisoborno, Marco Institucional, Planificación, Logros y
+  Memorias, Portal de Transparencia, Estados Financieros), Contáctenos
+  (Información Pública, Preguntas Frecuentes, Contáctenos, Directorio) y
+  Portal-ANDA. Varios elementos del menú apuntan a "#".
+- Carrusel de tres banners decorativos (archivos BANNER-TRANSITORIO-1/2/3.jpg
+  subidos en 2022).
+- Bloque "Servicios Frecuentes" con: Sistema de Factibilidades y Descarga tu
+  Factura.
+- Bloque "Noticias" con seis notas.
+- Bloque "Avisos" con notas de 2023, 2024 y 2025.
+- Fila de accesos: Descargas, Preguntas Frecuentes, Programas, Videos, Avisos.
+- Pie con redes sociales, mapa del sitio, política web, preguntas frecuentes,
+  carta de derecho, dirección, teléfono 915 y los logotipos del Gobierno.
+
+CONTEXTO 2 — Problemas que quiero resolver (mi diagnóstico)
+1. La página no prioriza los trámites que la gente busca: el carrusel decorativo
+   ocupa el lugar principal y los accesos útiles compiten con enlaces
+   institucionales.
+2. La navegación es demasiado profunda, está duplicada y tiene enlaces que no
+   navegan.
+3. No se distingue el contenido vigente del archivado: hay avisos de 2023 junto a
+   noticias de 2026, con el mismo peso visual. Además los iconos mezclan estilos
+   y falta espacio en blanco.
+
+CONTEXTO 3 — Contenido real que debe aparecer (no inventes datos)
+- Trámites principales: descargar factura con NPE, pagar en línea en el Portal
+  Ciudadano (915.gob.sv), reportar fuga o falta de agua, solicitar nuevo servicio
+  (factibilidad).
+- Línea de atención: 915.
+- Dirección: Colonia Libertad, Avenida Don Bosco, Edificio Administrativo ANDA,
+  San Salvador Centro, El Salvador.
+- Noticias reales del sitio:
+  * 26/08/2026 — Modernización de la planta de bombeo Palmeras de París, que
+    beneficia a más de 7,500 habitantes del distrito de Armenia, Sonsonate Este.
+  * 19/08/2026 — Trabajos preventivos en la infraestructura eléctrica del Sistema
+    Zona Norte.
+  * 29/07/2026 — Laboratorio de micro y macromedición del agua potable.
+- Enlaces institucionales obligatorios: Instituciones (instituciones.gob.sv) y
+  Portal de Transparencia.
+- Si un texto no está en esta lista, escribe contenido de ejemplo y márcalo como
+  tal en un comentario. No inventes cifras, correos ni teléfonos.
+
+CONTEXTO 4 — Identidad de marca
+- Azul institucional profundo como color base, con un celeste de acento; el tema
+  es el agua, así que la paleta debe leerse fría y limpia.
+- Tono formal pero cercano, propio de una institución pública que atiende a todo
+  el país.
+- Nada de morados ni degradados de moda: el sitio debe verse institucional, no de
+  startup.
+
+CONTEXTO 5 — Referencias visuales
+Sitios de servicio público donde el trámite está al frente: GOV.UK y los portales
+de compañías de agua y electricidad donde lo primero que se ve es "pagar factura"
+y "reportar una falla". Quiero esa lógica: contenido antes que decoración.
+
+RESTRICCIONES TÉCNICAS (obligatorias, es una tarea de universidad)
+- Solo HTML5 y CSS3. Sin frameworks (nada de Bootstrap ni Tailwind) y sin
+  JavaScript.
+- Las reglas de estilo deben ir en una hoja externa vinculada con
+  &lt;link rel="stylesheet"&gt;. No uses estilos embebidos ni atributos style.
+- Usa clases e id de forma clara y consistente.
+- Diseño responsivo: debe funcionar bien en teléfono, tableta y escritorio.
+- Accesible: contraste suficiente, textos alternativos, foco visible con teclado.
+- Sin imágenes externas: usa degradados CSS e iconos SVG en línea, salvo un
+  archivo SVG para el logotipo.
+- Comenta el CSS en español explicando cada bloque, porque tengo que explicar el
+  código en un video.
+
+QUÉ QUIERO QUE ENTREGUES
+1. index.html completo.
+2. css/estilos.css completo.
+3. El archivo SVG del logotipo.
+4. Al final, una lista de las técnicas de CSS y HTML que usaste que van más allá
+   de lo básico (etiquetas semánticas, flexbox, grid, variables, media queries,
+   etc.), con una frase que explique qué función cumple cada una.
+
+ESTRUCTURA QUE ESPERO EN LA PÁGINA
+Barra institucional, encabezado fijo con logotipo y menú de un solo nivel,
+portada con un mensaje claro y dos acciones, bloque de trámites principales
+destacado sobre la portada, aviso de servicio vigente y fechado, noticias con
+fecha visible, canales de atención, preguntas frecuentes desplegables y pie con
+la información institucional.</pre>
+            </details>
+
+            <h3>Resultados</h3>
+
+            <div class="reto-tarjetas">
+
+                <article class="reto-tarjeta">
+                    <h3>Resultado 1 - Instrucción genérica</h3>
+                    <p>
+                        Instrucción breve, sin material de contexto. El resultado no
+                        conserva la identidad ni el contenido real del sitio.
+                    </p>
+                    <p>
+                        <a class="reto-enlace" href="https://camayarengifo5158.github.io/Reto-ia-simple/" target="_blank"
+                            rel="noopener">Ver resultado genérico</a>
+                    </p>
+                </article>
+
+                <article class="reto-tarjeta">
+                    <h3>Resultado 2 - Instrucción elaborada</h3>
+                    <p>
+                        Instrucción construida con el código del sitio, capturas de
+                        pantalla, referencias visuales y notas de marca. Es el
+                        resultado final del reto.
+                    </p>
+                    <p>
+                        <a class="reto-enlace" href="https://camayarengifo5158.github.io/Reto-ia-complejo/" target="_blank"
+                            rel="noopener">Ver resultado elaborado</a>
+                    </p>
+                </article>
+
+                <article class="reto-tarjeta">
+                    <h3>Análisis de correspondencia</h3>
+                    <p>
+                        Clasificación del código del resultado final en contenido ya
+                        estudiado en el curso y contenido nuevo, con la función que
+                        cumple cada elemento.
+                    </p>
+                    <p>
+                        <a class="reto-enlace" href="analisis.html">Ver la tabla</a>
+                    </p>
+                </article>
+
+            </div>
+
+            <h3>Video explicativo</h3>
+
+            <p>
+                Explicación del procedimiento, las instrucciones utilizadas, los
+                resultados obtenidos y el análisis de correspondencia.
+            </p>
+
+            <!-- CAMBIAR ID_DEL_VIDEO por el identificador del video de YouTube -->
+            <div class="video-contenedor">
+                <iframe src="https://www.youtube.com/embed/ID_DEL_VIDEO"
+                    title="Reto IA - Guía 1 de Introducción al Desarrollo Web"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer id="pie">
+        <p>Guía 1 - Introducción al Desarrollo Web Carlos Amaya 20255158</p>
+    </footer>
+
+</body>
+
+</html>
